@@ -12,36 +12,18 @@
             ></v-text-field>
         </v-col>
 
-        <v-list
-        flat
-        subheader
-        >
-            <v-list-item-group
-            multiple
-            active-class=""
-            >
-                <div
-                v-for="tarefa, index in $store.state.tarefas"
-                :key="index"
-                >
-                    <TarefaProjeto
-                    :tarefa="tarefa"
-                    />
-                </div>
-
-            </v-list-item-group>
-        </v-list>
+        <ListaDeTarefas/>
     </div>
 </template>
 
 <script>
-import TarefaProjeto from '../components/tarefas/TarefaProjeto.vue'
+import ListaDeTarefas from '../components/tarefas/ListaDeTarefas.vue'
 
 export default {
     name: 'TodoTarefas',
 
     components: {
-        TarefaProjeto
+        ListaDeTarefas,
     },
 
     data(){
