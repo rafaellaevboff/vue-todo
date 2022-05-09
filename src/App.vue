@@ -1,16 +1,33 @@
 <template>
   <v-app id="inspire">
-    <v-navigation-drawer v-model="drawer" app>
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title class="text-h6">
-            Vue.js
-          </v-list-item-title>
-          <v-list-item-subtitle>
-            Lista de Tarefas
-          </v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
+
+    <v-navigation-drawer
+    v-model="drawer"
+    app>
+      <v-img
+      src="./assets/imagemPrincipal.jpg"
+      gradient="to top right, rgba(255,255,200,.2), rgba(255,255,102,.5)"
+      dark
+      class="pt-5 text-center"
+      >
+      <v-avatar
+      size="100">
+        <img
+          src="https://avatars.githubusercontent.com/u/81710271?v=4"
+          alt="Rafaella"
+        >
+      </v-avatar>
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title class="text-h6">
+              Vue.js
+            </v-list-item-title>
+            <v-list-item-subtitle>
+              Lista de Tarefas
+            </v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+      </v-img>
 
       <v-divider></v-divider>
 
@@ -40,6 +57,7 @@
       color="#43a047"
       dark
       prominent
+      height="190"
       src="./assets/imagemPrincipal.jpg"
       fade-img-on-scroll
       scroll-threshold="500"
@@ -53,21 +71,13 @@
 
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-app-bar-title>Title</v-app-bar-title>
-
-      <v-spacer></v-spacer>
-
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
+      <center>
+        <v-app-bar-title
+        class="mt-16"
+        >
+        <InputTarefa/>
+        </v-app-bar-title>
+      </center>
     </v-app-bar>
 
     <v-main>
@@ -77,9 +87,12 @@
 </template>
 
 <script>
+import InputTarefa from './components/InputTarefa.vue'
+
   export default {
+  components: { InputTarefa },
     data: () => ({ 
-      drawer: null,
+      drawer: true,
       itens: [
           { title: 'Tarefas', icon: 'mdi-view-dashboard', to:'/' },
           { title: 'Sobre', icon: 'mdi-help-box', to:'/sobre'  },
