@@ -19,7 +19,7 @@
         nav
       >
         <v-list-item
-          v-for="item in items"
+          v-for="item in itens"
           :key="item.title"
           :to="item.to"
           link
@@ -34,12 +34,6 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-
-    <!-- <v-app-bar app>
-     
-
-      <v-toolbar-title>Application</v-toolbar-title>
-    </v-app-bar> -->
 
 <v-app-bar
       app
@@ -86,7 +80,7 @@
   export default {
     data: () => ({ 
       drawer: null,
-      items: [
+      itens: [
           { title: 'Tarefas', icon: 'mdi-view-dashboard', to:'/' },
           { title: 'Sobre', icon: 'mdi-help-box', to:'/sobre'  },
         ],

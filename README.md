@@ -1,6 +1,6 @@
 # vue-todo
 
-> [👉 Visite a página do projeto 👈]()
+> [👉 Visite a página do projeto 👈](https://vue-to-do-list-rafaella.netlify.app/)
 
 ![image](https://user-images.githubusercontent.com/44410208/127399567-ee45cb10-9296-4f1d-bb30-da736c748972.png)
 

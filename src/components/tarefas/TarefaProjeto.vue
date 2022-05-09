@@ -12,20 +12,13 @@
         <v-list-item-content>
           <v-list-item-title
           :class="{'text-decoration-line-through':tarefa.concluido}"
-          >{{tarefa.titulo}}</v-list-item-title>
+          >{{tarefa.title}}</v-list-item-title>
         </v-list-item-content>    
           
         <v-list-item-action>
-          <v-btn
-          icon
-          @click.stop="handleRemoveTarefa(tarefa.id)"
-          >
-            <v-icon color="red darken-3">mdi-delete</v-icon>
-          </v-btn>
+            <TarefaMenu :tarefa="tarefa"/>
         </v-list-item-action>
       </template>
-
-
 
     </v-list-item>
     <v-divider></v-divider>
@@ -33,7 +26,10 @@
 </template>
 
 <script>
+import TarefaMenu from "./TarefaMenu.vue"
+
 export default {
+  components: {TarefaMenu},
   props:['tarefa'],
   methods:{
     alteraValorTarefa(tarefa){
