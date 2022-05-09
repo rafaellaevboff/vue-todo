@@ -17,13 +17,15 @@
           <v-btn
             color="grey darken-5"
             text
-            @click="$emit('fechaModal')">
+            @click="$emit('fechaModal')"
+            >
             Cancelar
           </v-btn>
           <v-btn
             color="red darken-1"
             text
-            @click="handleDeletar()">
+            @click="handleDeletar()"
+            @keyup.enter="handleDeletar()">
             Excluir
           </v-btn>
         </v-card-actions>

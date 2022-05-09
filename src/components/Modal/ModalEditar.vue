@@ -30,7 +30,8 @@
           <v-btn
             color="green darken-1"
             text
-            @click="handleEditar()">
+            @click="handleEditar()"
+            >
             Salvar
           </v-btn>
         </v-card-actions>
