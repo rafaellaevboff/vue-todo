@@ -1,4 +1,4 @@
-# vue-todo
+# Vue to-do
 
 > [👉 Visite a página do projeto 👈](https://vue-to-do-list-rafaella.netlify.app/)
 
